@@ -13,7 +13,7 @@
   --decor-color: #353430;
   --title-color: #ffc2e6;
   --title-shadow: #ff0070;
-  --section__title-color: #353430;
+  --section-title-color: #353430;
   --link-hover-color: rgba(50, 49, 45, 0.4);
   --text-color: #353430;
   --article-title-color: #353430;
@@ -30,7 +30,7 @@
     --decor-color: #353430;
     --title-color: #ffc2e6;
     --title-shadow: #ff0070;
-    --section__title-color: #353430;
+    --section-title-color: #353430;
     --link-hover-color: rgba(50, 49, 45, 0.4);
     --text-color: #353430;
     --article-title-color: #353430;
