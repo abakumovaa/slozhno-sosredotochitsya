@@ -18,7 +18,7 @@
   --title-shadow: #ff0070;
   --article-title-color: #000028;
   --background-color: #000028;
-  --background-image: url("/images/cover-image-dark.png");
+  --background-image: url("./images/cover-image-dark.png");
   --display-value: block;
 }
 
@@ -33,7 +33,7 @@
     --title-shadow: #ff0070;
     --article-title-color: #000028;
     --background-color: #000028;
-    --background-image: url("/images/cover-image-dark.png");
+    --background-image: url("./images/cover-image-dark.png");
     --display-value: block;
   }
 }
