@@ -1,4 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* ОБЩИЕ СТИЛИ ПРОЕКТА */
 
 .page {
   color: var(--accent-color);
@@ -12,7 +12,73 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.article {
+  grid-row: auto;
+  grid-column: auto;
+  color: var(--text-color);
+}
+
+.container {
+  display: grid;
+  gap: var(--main-gap);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main-title {
+  text-shadow: 4px 4px 0px var(--title-shadow);
+  font-size: var(--title-font-size);
+  line-height: 82.5%;
+  color: var(--title-color);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.section__title {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: var(--text-font-size);
+  color: var(--section-title-color);
+}
+
+.article__title {
+  color: var(--article-title-color);
+  font-size: var(--text-font-size);
+}
+
+.article__text {
+  padding-block-start: 10px;
+  font-size: var(--text-font-size);
+  color: var(--text-color);
+}
+
+.article__text-link {
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.decorated-zone::before {
+  position: absolute;
+  inset-inline-end: var(--decorative-element-inset);
+  inset-block-start: var(--decorative-element-inset);
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: var(--decor-color) 1px solid;
+  border-inline-end: var(--decor-color) 1px solid;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  inset-inline-start: var(--decorative-element-inset);
+  inset-block-end: var(--decorative-element-inset);
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: var(--decor-color) 1px solid;
+  border-inline-start: var(--decor-color) 1px solid;
 }
 
 /* --------------- HEADER ------------- */
@@ -97,17 +163,6 @@
   margin-left: -20px;
 }
 
-.main-title {
-  text-shadow: 4px 4px 0px var(--title-shadow);
-  font-size: var(--title-font-size);
-  line-height: 82.5%;
-  color: var(--title-color);
-}
-
-.title-decor {
-  background-color: var(--accent-color);
-}
-
 .header__subtitle {
   font-weight: bold;
   color: var(--article-title-color);
@@ -121,54 +176,20 @@
 .reasons {
   padding: 60px 20px 0 20px;
 }
-.reasons__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: var(--main-gap);
-}
 
-.section__title {
-  grid-column: 1;
-  grid-row: 1;
-  font-size: var(--text-font-size);
-  color: var(--section-title-color);
+.reasons__container {
+  grid-template-rows: repeat(2, auto);
 }
 
 .reasons__article {
   grid-column: 2/4;
-  grid-row: auto;
   align-self: stretch;
-  color: var(--text-color);
-}
-
-.article__title {
-  color: var(--article-title-color);
-  font-size: var(--text-font-size);
-}
-
-.article__text {
-  padding-block-start: 10px;
-  font-size: var(--text-font-size);
-  color: var(--text-color);
 }
 
 /* ---------- MAIN. SECTION EXAMPLES ---------- */
 
 .examples {
   padding: 80px 20px 0 20px;
-}
-
-.examples__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--main-gap);
-}
-
-.examples__article {
-  grid-column: auto;
-  grid-row: auto;
-  color: var(--text-color);
 }
 
 .examples__title {
@@ -185,9 +206,7 @@
 }
 
 .advices__container {
-  display: grid;
   grid-template-columns: 315px auto;
-  gap: var(--main-gap);
 }
 
 .article__list-item-title {
@@ -195,10 +214,6 @@
   font-size: var(--text-font-size);
   font-weight: 400;
   margin-block-start: 20px;
-}
-
-.article__text-link {
-  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 .article__text-link:hover {
@@ -220,10 +235,7 @@
 }
 
 .gallery__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
-  gap: var(--main-gap);
 }
 
 .gallery__title {
@@ -279,28 +291,6 @@
   align-self: center;
   justify-self: center;
   text-shadow: 2px 2px 0px var(--title-shadow);
-}
-
-.decorated-zone::before {
-  position: absolute;
-  inset-inline-end: var(--decorative-element-inset);
-  inset-block-start: var(--decorative-element-inset);
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-start: var(--decor-color) 1px solid;
-  border-inline-end: var(--decor-color) 1px solid;
-}
-
-.decorated-zone::after {
-  position: absolute;
-  inset-inline-start: var(--decorative-element-inset);
-  inset-block-end: var(--decorative-element-inset);
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-end: var(--decor-color) 1px solid;
-  border-inline-start: var(--decor-color) 1px solid;
 }
 
 /* ------------ ADAPTIVE --------------- */
@@ -371,7 +361,7 @@
   }
 }
 
-@media (max-width: 516px) {
+@media (max-width: 564px) {
   .advices__container {
     grid-template-columns: auto;
     gap: 20px;
